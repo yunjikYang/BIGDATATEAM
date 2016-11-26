@@ -9,6 +9,7 @@
 <MOML>
 	<APPLICATIONINFO>
 		<START url="ui/start.xml" /> 
+		<THEME src="theme/common.xml"/>
 		<ORIENTATION type="defaultPortrait" />
 	</APPLICATIONINFO>
 </MOML>

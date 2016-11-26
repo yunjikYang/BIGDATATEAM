@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Created by ApplusForm.com on 2013.8.6
+
+	Permission is granted to copy, distribute, modify under the terms of ApplusForm License.
+
+	Copyright (C) 2014 ApplusForm.com. All rights reserved.
+-->
+<MOML version="1.0.0">
+    <THEME id="themeCopyright" layout="320,35" defaultImg="/res/copy.jpg"/>
+    <THEME id="themeNavigationTitle" layout="0,0,320,40" defaultImg="/res/top_bg.jpg" textAlign="center" textColor="#ffffff" fontSize="18"/>
+    <THEME id="themeMenuBtn" layout="10,5,50,30" text="" defaultImg="/res/me.png" onClick="function.document.document.toggleSlide"/>
+</MOML>
