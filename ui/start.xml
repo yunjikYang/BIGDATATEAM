@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<MOML>
+<MOML version="1.1.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.applusform.com/xsd/moml_ui_1.1.8.xsd">
 	<THEMES>
 		<THEME element="BUTTON" textColor="#ffffff" defaultImg="#0080ff" pressedImg="#008000" margin="1"/>
 	</THEMES>
@@ -9,8 +9,7 @@
 			<LABEL text="가까운 병원 검색 : "/>
 
 			<WINDOW align="linear:subCenter">
-				<BUTTON layout="160,30" text="현재위치 확인" onClick="function.findLocation" />
-				
+				<BUTTON layout="160,30" text="현 위치 확인" onClick="function.findLocation" />
 				<BUTTON layout="60,30" text="검색" onClick="function.search" />
 			</WINDOW>
 
@@ -22,7 +21,7 @@
 			</WINDOW>
 
 			<WINDOW align="linear:subCenter">
-				<LABEL text="현 주소" layout="120,30" fontSize="10" textAlign="vCenter" textColor="gray"/>
+				<LABEL text="현 주소" layout="60,30" fontSize="10" textAlign="vCenter" textColor="gray"/>
 				<LABEL id="address" layout="200,30" fontSize="10" textAlign="vCenter" textColor="gray"/>
 			</WINDOW>
 
@@ -48,11 +47,13 @@
 				</WINDOW>
 			</WINDOW>
 			
-			<LABEL text="자료제공 : 국립중앙의료원" textAlign="center|right"/>
+			<LABEL text="자료제공 : 국립중앙의료원" />
 		</WINDOW>
 	</UILAYOUT>
 
-	<CMD cmd="userVariable.serviceKey = 'drV%2Bmn6Ib4%2B7rAfkoQmwCi%2FqKis8lwT34J9NxiqX9kgBePA8oONfX6%2FZjFN%2BNOt9htJ9RqXacrOAfrrCIzdmLw%3D%3D'" />
+	<!-- https://www.data.go.kr 에서 오픈API - 전국 병‧의원 찾기 서비스의 [SERVICE KEY]를 발급 받아야 합니다. -->
+	<!-- 다른 사람의 키를 사용할 경우 트래픽을 초과하거나 변경되면 동작하지 않게됩니다.-->
+	<CMD cmd="userVariable.serviceKey = 'XAQRkAc4BBj5RWTWfdEX5Oc5ry0o4j74tmxD5R4HhJoegNLrNTlRZl6%2BCW%2BX%2BC28DAwBYq73UvcNcdB6n591bg%3D%3D'" />
 	<FUNCTION id="search">
 		<RETURN condition="latitude.text == 0 or longitude.text == 0" cmd="device.systemPopup('현위치를 확인하거나 직접 좌표를 입력하세요.')" />
 		<CMD cmd="url = 'http://openapi.e-gen.or.kr/openapi/service/rest/HsptlAsembySearchService/getHsptlMdcncLcinfoInqire?ServiceKey=' + userVariable.serviceKey"/>
