@@ -10,7 +10,7 @@
 
 			<WINDOW align="linear:subCenter">
 				<BUTTON layout="160,30" text="현재위치 확인" onClick="function.findLocation" />
-				<LABEL layout="10,30" text="">
+				
 				<BUTTON layout="60,30" text="검색" onClick="function.search" />
 			</WINDOW>
 
@@ -22,8 +22,8 @@
 			</WINDOW>
 
 			<WINDOW align="linear:subCenter">
-				<LABEL text="현 주소" layout="300,30" fontSize="10" textAlign="vCenter" textColor="gray"/>
-				<LABEL id="address" layout="300,30" fontSize="10" textAlign="vCenter" textColor="gray"/>
+				<LABEL text="현 주소" layout="120,30" fontSize="10" textAlign="vCenter" textColor="gray"/>
+				<LABEL id="address" layout="200,30" fontSize="10" textAlign="vCenter" textColor="gray"/>
 			</WINDOW>
 
 			<WINDOW layout="300,300" align="relative">
