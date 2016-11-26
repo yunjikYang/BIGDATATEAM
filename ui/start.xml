@@ -9,7 +9,7 @@
 			<LABEL text="가까운 병원 검색 : "/>
 
 			<WINDOW align="linear:subCenter">
-				<BUTTON layout="160,30" text="현 위치 확인" onClick="function.findLocation" />
+				<BUTTON layout="120,30" text="현 위치 확인" onClick="function.findLocation" />
 				<BUTTON layout="60,30" text="검색" onClick="function.search" />
 			</WINDOW>
 
@@ -51,7 +51,7 @@
 		</WINDOW>
 	</UILAYOUT>
 
-	<CMD cmd="userVariable.serviceKey = 'V%2Bmn6Ib4%2B7rAfkoQmwCi%2FqKis8lwT34J9NxiqX9kgBePA8oONfX6%2FZjFN%2BNOt9htJ9RqXacrOAfrrCIzdmLw%3D%3D'" />
+	<CMD cmd="userVariable.serviceKey = 'FV9wuYwIRLEK6pDx%2FRwuLng3UatKvnllr1%2FSGJsAYitOwbAmSklS7OQ4EN63Wq0fg2WjY39bWiMzkC9HAVS7tA%3D%3D'" />
 	<FUNCTION id="search">
 		<RETURN condition="latitude.text == 0 or longitude.text == 0" cmd="device.systemPopup('현위치를 확인하거나 직접 좌표를 입력하세요.')" />
 		<CMD cmd="url = 'http://openapi.e-gen.or.kr/openapi/service/rest/HsptlAsembySearchService/getHsptlMdcncLcinfoInqire?ServiceKey=' + userVariable.serviceKey"/>
