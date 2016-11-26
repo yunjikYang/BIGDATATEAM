@@ -52,6 +52,7 @@
 		</WINDOW>
 	</UILAYOUT>
 
+	<CMD cmd="userVariable.serviceKey = 'ABCDEFGHIJKLMN01234%3D%3D" />
 	<FUNCTION id="search">
 		<RETURN condition="latitude.text == 0 or longitude.text == 0" cmd="device.systemPopup('현위치를 확인하거나 직접 좌표를 입력하세요.')" />
 		<CMD cmd="url = 'http://openapi.e-gen.or.kr/openapi/service/rest/HsptlAsembySearchService/getHsptlMdcncLcinfoInqire?ServiceKey=' + userVariable.serviceKey"/>
